@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Response</title>
+    <link rel="stylesheet" href="/project/css/responsestyle.css">
+    <script src="/project/javascript/parentresponse.js"></script>
+   
+</head>
+<body>
+    
+  <img src="/project/images/acgcet.png" id="clglogo">
+
+    <div class="feedback" id="feedback">
+		<p>Parent Feedback Response</p><br>
+		<div id="totalRating">
+      <h4 style="float: right; margin-top: -68px; margin-right: 55px;">No. Of Respondents : <span id="noOfResponses"></span></h4>
+            <h4 style="float: right; margin-top: -40px; margin-right: 55px;">Overall Rating : </h4>
+            <p id="overallRating" ></p>
+            <!-- <p id="total1" class="total">&#9733</p>
+            <p id="total2" class="total">&#9733</p>
+            <p id="total3" class="total">&#9733</p>
+            <p id="total4" class="total">&#9733</p>
+            <p id="total5" class="total">&#9733</p> -->
+        </div>
+		
+          <div id="textInputs" style="display: none;">
+            <label>Student Name :</label>
+            <span id="studentName"class="spans"></span>
+            <br>
+            <label>Parent Name :</label>
+            <span id="parentName"class="spans"></span>
+            <br>
+            <label>Branch :</label>
+            <span id="branch"class="spans"></span>
+            <br>
+            <label>Sem :</label>
+            <span id="sem"class="spans"></span>
+            <br>
+            <label>Student Id :</label>
+            <span id="studentId"class="spans"></span>
+            <br>
+            <label>Email ID :</label>
+            <span id="email"class="spans"></span>
+            <br>
+            <label>Qualification and Occupation : </label>
+            <span id="qualAndOcc"class="spans"></span>
+            <br>
+            <label>Address : </label>
+            <span id="address"class="spans"></span>
+            <br>
+            <label>Contact :</label>
+            <span id="contact"class="spans"></span>
+            <br>  
+          </div>
+	
+		
+	
+		  <div id="form-input">
+        <label>Please rate each of the following items in terms of Ratings given below </label>
+        <br>
+        <br>
+        <label > <span class="veryPoor">1</span>    - Very Poor, <span class="poor">2</span>    - Poor, <span class="good">3</span>    - Good, <span class="veryGood">4</span>    - Very Good, <span class="excellent">5</span>   - Excellent </label>
+        <br>
+      
+
+      </div>
+		
+		  <div class="clear"></div> 
+		
+		</form>
+    <div id="editor"></div>
+    <center>
+      <p>
+        <button id="generatePDF" onclick="window.print()">  generate PDF</button>
+        <input id="search" type="text" placeholder="Enter Student Register Number..." >
+        <button id="searchButton" onclick="searchbyRollNo()">Search</button>
+      </p>
+    </center>
+		</div>
+    
+
+
+
+</body>
+</html>

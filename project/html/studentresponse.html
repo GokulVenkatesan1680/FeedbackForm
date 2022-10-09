@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Response</title>
+    <link rel="stylesheet" href="/project/css/responsestyle.css">
+    <script src="/project/javascript/studentresponse.js"></script>
+    
+</head>
+<body>
+    
+  <img src="/project/images/acgcet.png" id="clglogo">
+
+    <div class="feedback" id="feedback">
+		<p>Student Feedback Response</p><br>
+		<div id="totalRating">
+      <h4 style="float: right; margin-top: -68px; margin-right: 55px;">No. Of Respondents : <span id="noOfResponses"></span></h4>
+            <h4 style="float: right; margin-top: -40px; margin-right: 55px;">Overall Rating : </h4>
+            <p id="overallRating" ></p>
+            <!-- <p id="total1" class="total">&#9733</p>
+            <p id="total2" class="total">&#9733</p>
+            <p id="total3" class="total">&#9733</p>
+            <p id="total4" class="total">&#9733</p>
+            <p id="total5" class="total">&#9733</p> -->
+        </div>
+		
+        
+	
+		
+	
+		  <div id="form-input">
+        <label>Department : </label><span id="deptheader"></span>
+        <br>
+        <br>
+        <label>Subject Code : </label><span id="codeheader"></span>
+        <br>
+        <br>
+        <label>Please rate each of the following items in terms of Ratings given below </label>
+        <br>
+        <br>
+        <label > <span class="veryPoor">1</span>    - Very Poor, <span class="poor">2</span>    - Poor, <span class="good">3</span>    - Good, <span class="veryGood">4</span>    - Very Good, <span class="excellent">5</span>   - Excellent </label>
+        <br>
+      
+
+      </div>
+		
+		  <div class="clear"></div> 
+		
+		</form>
+    <div id="editor"></div>
+    <center>
+      <p>
+        <button id="generatePDF" onclick="window.print()">  generate PDF</button>
+  
+      </p>
+    </center>
+		</div>
+    
+
+
+
+</body>
+</html>

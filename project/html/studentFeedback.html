@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Feedback</title>
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<link rel="stylesheet" href="/project/css/studentFeedback.css">
+<link rel="stylesheet" href="/project/css/style.css">
+<link rel="stylesheet" href="/project/css/common.css">
+ 
+
+</head>
+<body>
+
+
+<div class="wrapper hover_collapse">
+	<div class="top_navbar">
+		<div class="logo">ACGCET FEEDBACK PORTAL</div>
+		
+		<div class="menu">
+			
+			<div class="hamburger">
+				
+				<i class="fas fa-bars"></i>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar_inner">
+		<ul id="inner-list">
+
+			<li>
+				<a href="/project/html/exitStudentFeedback.php">
+					<span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+					<span class="text">Exit Student Survey</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/project/html/studentFeedback.php">
+					<span class="icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+					<span class="text">Student  Feedback</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/project/html/parentFeedback.php">
+					<span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+					<span class="text">Parent Feedback</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/project/html/employerFeedback.php">
+					<span class="icon"><i class="fa fa-building"aria-hidden="true"></i></span>
+					<span class="text">Employer Feedback</span>
+				</a>
+			</li>
+            <li>
+                <a href="/project/html/login.html">
+                    <span class="icon"><i class="fa fa-user"aria-hidden="true"></i></span>
+                    <span class="text">Admin Login</span>
+                </a>
+            </li>
+			
+		</ul>
+		</div>
+	</div>
+
+    <div id="container">
+        <div id="inner-container">
+        Enter the following details<br>
+        
+        <input id="email" class="details" type="email" placeholder="Enter Your Mail Id">
+        <br>
+        <select id="programme" class="details">
+            <option value="" selected disabled>Programme</option>
+            <option value="ug">UG</option>
+         
+        </select>
+        
+        <br>
+        <select id="dept" class="details">
+            <option value="" selected disabled>Select your Department</option>
+            <option value="mech">Mechanical Engineering</option> <option value="civil">Civil Engineering</option> <option value="eee">Electrical and Electronics Engineering</option> <option value="ece">Electronics and Communication Engineering</option>
+            <option value="cse">Computer Science Engineering</option>
+        </select>
+        
+        <br>
+        <select id="sem" class="details">
+            <option value="" selected disabled>Semester for which the feedback is submitted</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        
+        </select>
+        <br>
+
+        <select id="yearOfStudy" class="details" style="display: none;">
+            <option value=""  disabled>Year Of Study</option>
+            <option value="0" selected>0</option>
+            <option value="2">II</option>
+            <option value="3">III</option>
+            <option value="4">IV</option>
+        </select>
+        <br>
+    
+        <select id="passoutYear" class="details">
+            <option value="" selected disabled>Passout Year</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2024">2027</option>
+            <option value="2025">2028</option>
+            <option value="2026">2029</option>
+        </select>
+        <br>
+
+        <button type="button" class="submit" onclick="select()" >Next</button>
+        </div>
+    </div>
+
+    <div id="paper" class="papers">
+
+        
+
+
+    </div>
+
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+
+	<div class="feedback" id="feedback" style="display: none;">
+		<p>Dear Student,<br>
+		Please spare some moments to give us your valuable feedback.</p>
+		
+		<form id="form" method="post" action="" target="dummyframe" onsubmit="return submitForm(true)">
+	
+            <br>
+            
+		<label for="facultyName">Name of the Faculty (without space and initial)</label>
+		<br>
+		<input type="text" id="name" name="facultyName" class="text-input">
+		<br>
+	
+		
+		
+		
+		 
+
+          <select id="dept" name="dept" class="text-input" style="display: none;">
+           
+            <option id="selectedDept" selected value=""></option>
+        </select>
+        
+        <br>
+
+        <select id="sub" name="sub" class="text-input" style="display: none;">
+            
+            <option id="selectedsub"  value="" selected></option>
+        </select>
+        <br>
+        <select id="sem" name="sem" class="text-input" style="display: none;">
+           
+            <option id="selectedSem"  value="" selected></option>
+           
+        
+        </select>
+        <br>
+
+        <select id="yearOfStudy" name="yearOfStudy" class="text-input" style="display: none;">
+           
+            <option id="selectedYOS" value="" selected></option>
+        </select>
+        <br>
+
+        <select id="passoutYear" name="passoutYear" class="text-input" style="display: none;">
+           
+            <option id="selectedPOY" value="" selected></option>
+        </select>
+        <br>
+        <select id="email" name="email" class="text-input" style="display: none;">
+            
+            <option id="selectedEmail" value="" selected></option>
+        </select>
+        <br>
+        <select id="pk" name="pk" class="text-input" style="display: none;">
+            <option id="selectedpk" selected value=""></option>
+        </select>
+        <br>
+    
+	
+		  <div id="form-input"></div>
+		<!-- <label for="m_3189847521540640526commentText">3. Any Other suggestions:</label><br/><br/>
+		<textarea cols="75" name="commentText" rows="5"></textarea><br>
+		<br> -->
+		  <div class="clear"></div> 
+		<input style="background:#43a7d5;color:#fff;padding:12px;border:0" type="submit" value="Submit your review" onclick="submitted()">&nbsp;
+		</form>
+						  </div>
+    
+
+    <script src="/project/javascript/studentFeedback.js"></script>
+
+
+
+</div>
+
+<script type="text/javascript">
+//I have determined the constant of some class function
+load();
+function load(){
+	var li_items = document.querySelectorAll(".sidebar ul li");
+    var hamburger = document.querySelector(".hamburger");
+    var wrapper = document.querySelector(".wrapper");
+    
+    //What will change if you move the mouse over the sidebar
+    
+    li_items.forEach((li_item)=>{
+        li_item.addEventListener("mouseenter", ()=>{
+    
+    
+                li_item.closest(".wrapper").classList.remove("hover_collapse");
+          //I have already added style information about hover_collapse
+    
+        })
+      //In general, hover_collapse will be applied on the sidebar.
+    
+    //Hover_collapse will be removed from the sidebar when the mouse is moved
+    })
+    
+    li_items.forEach((li_item)=>{
+        li_item.addEventListener("mouseleave", ()=>{
+    
+                li_item.closest(".wrapper").classList.add("hover_collapse");
+          //Hover Collapse will be applied again when the mouse is removed
+    
+        })
+    })
+    
+    
+    //Now I will execute the menu button
+    
+    //I have instructed here that hover_collapse will be applied and removed when the menu button is clicked.
+    
+    //This means that the first click will be applied and the second click will be removed
+    hamburger.addEventListener("click", () => {
+    
+        hamburger.closest(".wrapper").classList.toggle("hover_collapse");
+    })
+}
+ 
+</script>
+</body>
+</html>
+
+
+
+
+
+    
